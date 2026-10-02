@@ -384,11 +384,6 @@ footer p {
     text-align: center;
 }
 
-.timeline-list{
-   
-}
-
-
 .contact{
     background-color: lightgray;
     padding: 30px 140px;
@@ -422,13 +417,329 @@ footer p {
 }
 
 .product{
-    background-color: lightgray;
-    height: 100vh;
+    background-color: #f3f4f7;
+    padding: 30px 80px;
 }
 
 .product-path{
     background-color: white;
-    padding: 12px 100px;
+    padding: 12px 80px;
     font-size: 15px;
     color: gray;    
 }
+
+.merino{
+    display: flex;
+
+}
+
+
+
+.merino-images{
+    margin-right: 40px;
+    
+}
+
+
+.merino-angles{
+    display: flex;
+    gap: 15px;
+    margin-top: 7px;
+}
+
+.merino-angles img{
+    aspect-ratio: 1;
+    width: 123px;
+}
+
+@media (min-width: 1080px){
+
+    .merino{
+        gap: 200px;
+    }
+
+    .merino-big{
+        width: 700px;
+        height: 650px;
+        
+    }
+
+    .product{
+        padding-left: 150px;
+    }
+
+    
+
+    .merino-angles img{
+        aspect-ratio: 1;
+        width: 223px;
+        height: 200px;
+    }
+
+    .product-path{
+        padding: 12px 150px;
+    }
+
+    .merino-images{
+        margin-right: 0px;
+}
+
+
+}
+
+
+
+.merino-title{
+    width: 50%;
+}
+
+.rating{
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    
+}
+
+
+
+.rating p{
+    color: orange;
+    font-size: 12px;
+}
+
+.rating .stars{
+    padding-left: 0;
+}
+
+.merino-descrip{
+    width: 55%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: gray;
+}
+
+.sizes-container{
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.price{
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.sizes-container p {
+    border: 1px solid lightgray;
+    aspect-ratio: 1;
+    width: 35px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.colors{
+    margin-top: 25px;
+}
+
+.color-container{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.blue{
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.black{
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.green{
+    background-color: green;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.brown{
+    background-color: brown;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.quantity{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+    gap: 10px;
+}
+
+.quantity select{
+    width: 110px;
+    padding: 5px;
+    border: none;
+    
+}
+
+.merino-btns{
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;   
+}
+
+.add-cart{
+    border: none;
+    background-color: orange;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+
+.add-wish{
+    border:2px solid black ;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+
+.product-info{
+    margin-top: 25px;
+    
+}
+
+.info-container{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+    gap: 40px;
+    padding-top: 20px;
+    height: 50px;
+}
+
+.info-container p {
+    color: gray;
+    height: 100%;
+    
+  
+}
+
+.info-container p:hover{
+    color: black;
+    border-bottom: 1px solid orange;
+}
+
+
+.product-details{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.product-descrip{
+    width: 70%;
+    color: gray;
+
+}
+
+.key-features{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50vh;
+    
+}
+
+.key-features h3{
+    padding-bottom: 10px;
+}
+
+.feature{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    border-bottom: 1px solid lightgray;
+    padding: 10px;
+}
+
+.feature label{
+    color: gray;
+}
+
+.feature-care{
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    
+    padding: 10px;
+}
+
+.feature-care label{
+    color: gray;
+}
+
+.customer-reviews{
+    border-top: 1px solid lightgray;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.customer-reviews h2{
+    padding-bottom: 10px;
+}
+
+
+.review-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 1px solid lightgray;
+    padding: 20px 0px;
+}
+
+.review-text {
+    width: 60vh;
+}
+
+.reviewer{
+    display: flex;
+    align-items: center;
+}
+
+.reviewer p {
+    font-weight: bold;
+}
+
+.stars{
+    color: orange;
+    padding-left: 20px;
+}
+
+.reviewer time{
+    margin-left: auto;
+}
+
+.review-container-nina{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px 0px;
+}
+
+.stars-container{
+    display: flex;
+}
+
+.star-black{
+    color: white;
+}
+
+
