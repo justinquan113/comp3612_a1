@@ -23,9 +23,13 @@
             <li><a href="#">Cart(0)</a></li>
         </ul>
     </nav>
-    <div class="product-path">
-        <p>Home > Sweaters > Marino Wool Cable Knit Sweater</p>
-    </div>
+    <nav class="product-path" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Sweaters</a></li>
+            <li aria-current="page">Merino Wool Cable Knit Sweater</li>
+        </ol>
+    </nav>
     <main class="product">
         <section class="merino">
             <div class="merino-images">
@@ -44,7 +48,8 @@
                     <p class="stars">★★★★★</p>
                     <p>(4.8/5) - 127 reviews</p>
                 </div>
-                <div>
+                <form action="https://www.randyconnolly.com/tests/process.php" method="post">
+                    <input type="hidden" name="product" value="Merino Wool Cable Knit Sweater">
                     <p class="price">$199.99</p>
                     <p class="merino-descrip">This luxurious cable knit sweater is made from 100% merino wool for exceptional warmth and softness. The classic cable pattern adds timeless texture and visual interest to this versatile piece. Natural temperature regulation properties make it perfect for transitional seasons.</p>
                     <div class="size">
@@ -68,8 +73,8 @@
                         </div>
                     </div>
                     <div class="quantity">
-                        <label>Quantity: </label>
-                        <select>
+                        <label for="quantity">Quantity: </label>
+                        <select id="quantity" name="quantity">
                             <option>1</option>
                             <option>2</option>
                             <option>3</option>
@@ -78,17 +83,17 @@
                         </select>
                     </div>
                     <div class="merino-btns">
-                        <button class="add-cart">Add to Cart</button>
-                        <button class="add-wish">Add to Wishlist</button>
+                        <button type="submit" class="add-cart">Add to Cart</button>
+                        <button type="button" class="add-wish">Add to Wishlist</button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
         <div class="product-info">
             <div class="info-container">
-                <p>Description</p>
-                <p>Specifications</p>
-                <p>Care Instructions</p>
+                <button type="button">Description</button>
+                <button type="button">Specifications</button>
+                <button type="button">Care Instructions</button>
             </div>
         </div>
         <section class="product-details">
@@ -97,83 +102,77 @@
             <div class="key-features">
                 <h3>Key Features:</h3>
                 <div class="feature">
-                    <label>Material</label>
+                    <p>Material</p>
                     <p>100% premium merino wool</p>
                 </div>
                 <div class="feature">
-                    <label>Style</label>
+                    <p>Style</p>
                     <p>Classic cable knit pattern</p>
                 </div>
                 <div class="feature">
-                    <label>Closures</label>
+                    <p>Closures</p>
                     <p>Ribbed cuffs and hem</p>
                 </div>
                 <div class="feature-care">
-                    <label>Care</label>
+                    <p>Care</p>
                     <p>Dry clean recommended</p>
                 </div>
             </div>
         </section>
         <section class="customer-reviews">
             <h2>Customer Reviews</h2>
-            <div class="review-container">
+            <article class="review-container">
                 <div class="reviewer">
-                        <p>Maric C.</p>
+                        <p>Maria C.</p>
                         <p class="stars">★★★★★</p>
-                        <time>March 10, 2025</time>
+                        <time datetime="2025-03-10">March 10, 2025</time>
                 </div>
                 <p class="review-text">Absolutely stunning sweater! The merino wool is incredibly soft and the cable knit detail is beautiful. Worth the investment.</p>
-            </div>
-            <div class="review-container">
+            </article>
+            <article class="review-container">
                 <div class="reviewer">
                     <p>Robert H.</p>
                       <div class="stars-container">
                         <p class="stars">★★★★</p>
                         <p class="star-black">★</p>
                     </div>
-                    <time>March 5, 2025</time>
+                    <time datetime="2025-03-05">March 5, 2025</time>
                 </div>
                 <p class="review-text">Bought this for our lead software engineer and she loves it. High quality construction and the wool feels luxurious. Fits true to size.</p>
-            </div>
-            <div class="review-container-nina">
+            </article>
+            <article class="review-container-nina">
                 <div class="reviewer">
                     <p>Nina F.</p>
                     <div class="stars-container">
                         <p class="stars">★★★</p>
                         <p class="star-black">★★</p>
                     </div>
-                    
-                    <time>Februray 25, 2025</time>
+
+                    <time datetime="2025-02-25">February 25, 2025</time>
                 </div>
                 <p class="review-text">Beautiful sweater but requires dry cleaning which is inconvenient. The quality is excellent though and it's very warm.</p>
-            </div>
+            </article>
         </section>
-        
-
-
-
-
-
     </main>
     <footer>
         <div class="footer-container">
             <p class="footer-header">Customer Service</p>
-            <p>Contact Us</p>
-            <p>Size Guide</p>
-            <p>Returns</p>
-            <p>Shipping Info</p>
+            <a href="#">Contact Us</a>
+            <a href="#">Size Guide</a>
+            <a href="#">Returns</a>
+            <a href="#">Shipping Info</a>
             <p class="footer-header">Company</p>
-            <p>About Us</p>
-            <p>Careers</p>
-            <p>Press</p>
-            <p>Privacy Policy</p>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+            <a href="#">Privacy Policy</a>
             <p class="footer-header">Connect</p>
-            <p>Newsletter</p>
-            <p>Facebook</p>
-            <p>Instagram</p>
-            <p>Twittter</p>
+            <a href="#">Newsletter</a>
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
         </div>
-        <p class="footer-note">@ 2025 COMP3612 All rights reserved</p>
+        <p class="footer-note">&copy; 2025 COMP3612 All rights reserved</p>
     </footer>
 </body>
 </html>

@@ -3,10 +3,16 @@
     margin: 0;
 }
 
-main{
+body{
+    font-family: sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
 }
 
 .nav-bar{
@@ -16,7 +22,7 @@ main{
     justify-content: space-between;
     width: 100%;
     background-color: #171B26;
-    font-family: Poppins;
+    font-family: "Poppins", sans-serif;
     height: 10vh;
 }
 
@@ -30,14 +36,14 @@ main{
 
 
 
-li a {
+.nav-items li a {
     text-decoration: none;
     color: #5C8099;
     border-radius: 5px;
     padding: 7px 10px;
 }
 
-li a:hover{
+.nav-items li a:hover{
     background-color: #34495E;
 }
 
@@ -209,6 +215,12 @@ footer p {
     font-size: 15px;
 }
 
+footer a {
+    color: lightgray;
+    font-size: 15px;
+    text-decoration: none;
+}
+
 .footer-header{
     color: white;
     font-weight: 600;
@@ -360,9 +372,19 @@ footer p {
     align-items: center;
     background-color: white;
     aspect-ratio: 1;
-    
+    overflow: hidden;
     border: 1px solid lightgray;
     border-radius: 5px;
+}
+
+.person-photo img{
+    display: block;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    image-rendering: auto;
 }
 
 .person-title{
@@ -375,13 +397,56 @@ footer p {
 }
 
 .our-journey{
-    padding-top: 40px ;
-    height: 40vh;
-
+    padding: 40px 140px 60px;
 }
 
 .our-journey h2{
     text-align: center;
+}
+
+.timeline-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.timeline-list{
+    list-style-type: none;
+    padding: 0;
+    width: 40%;
+}
+
+
+.timeline-data{
+    position: relative;
+    border-left: 1px solid lightgray;
+    padding: 0 0 30px 25px;
+}
+
+.timeline-data:last-child{
+    padding-bottom: 0;
+}
+
+
+.timeline-data::before{
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 5px;
+    width: 9px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.timeline-date{
+    font-size: 16px;
+    color: orange;
+    margin-bottom: 10px;
+}
+
+.timeline-text{
+    color: gray;
 }
 
 .contact{
@@ -425,7 +490,24 @@ footer p {
     background-color: white;
     padding: 12px 80px;
     font-size: 15px;
-    color: gray;    
+    color: gray;
+}
+
+.product-path ol{
+    display: flex;
+    gap: 8px;
+    list-style: none;
+    padding: 0;
+}
+
+.product-path a{
+    color: gray;
+    text-decoration: none;
+}
+
+.product-path li + li::before{
+    content: ">";
+    margin-right: 8px;
 }
 
 .merino{
@@ -455,7 +537,7 @@ footer p {
 @media (min-width: 1080px){
 
     .merino{
-        gap: 200px;
+        gap: 80px;
     }
 
     .merino-big{
@@ -490,7 +572,7 @@ footer p {
 
 
 .merino-title{
-    width: 50%;
+    max-width: 240px;
 }
 
 .rating{
@@ -512,7 +594,7 @@ footer p {
 }
 
 .merino-descrip{
-    width: 55%;
+    max-width: 480px;
     margin-top: 25px;
     margin-bottom: 25px;
     color: gray;
@@ -626,14 +708,17 @@ footer p {
     height: 50px;
 }
 
-.info-container p {
+.info-container button {
     color: gray;
     height: 100%;
-    
-  
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
 }
 
-.info-container p:hover{
+.info-container button:hover{
     color: black;
     border-bottom: 1px solid orange;
 }
@@ -671,18 +756,18 @@ footer p {
     padding: 10px;
 }
 
-.feature label{
+.feature p:first-child{
     color: gray;
 }
 
 .feature-care{
     display: grid;
     grid-template-columns: 200px 1fr;
-    
+
     padding: 10px;
 }
 
-.feature-care label{
+.feature-care p:first-child{
     color: gray;
 }
 
